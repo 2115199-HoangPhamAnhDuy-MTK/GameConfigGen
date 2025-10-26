@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Config Gen</string>
+    <string name="tier">Tier</string>
+    <string name="soc">SOC</string>
+    <string name="platform">Platform (eg. SM8750 for 8 Elite)</string>
+    <string name="update">Update</string>
+    <string name="file">file</string>
+</resources>

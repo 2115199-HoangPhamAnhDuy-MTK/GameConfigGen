@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_margin="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/soc"/>
+
+    <TextView
+        android:id="@+id/tvSocValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="N/A"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tier" />
+
+    <TextView
+        android:id="@+id/tvTierValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="N/A"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvConfigContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/file"
+        android:textIsSelectable="true"
+        android:typeface="monospace"
+        android:layout_marginTop="32dp"/>
+
+    <EditText
+        android:id="@+id/etSocOverride"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/platform"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/update" />
+
+</LinearLayout>
