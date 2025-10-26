@@ -13,13 +13,10 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
 import java.lang.reflect.Method;
 
 public class MainActivity extends AppCompatActivity {
@@ -88,11 +85,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void writeFile(String content) {
-        try (FileOutputStream fos = new FileOutputStream(configFile);
-             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(fos))) {
+        try (FileWriter writer = new FileWriter(configFile)) {
             writer.write(content);
         } catch (IOException e) {
-            Log.e(TAG, "Lỗi khi ghi file", e);
             Toast.makeText(this, "Lỗi khi ghi file: " + e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
@@ -104,9 +99,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         StringBuilder text = new StringBuilder();
-        try (FileInputStream fis = new FileInputStream(configFile);
-             BufferedReader reader = new BufferedReader(new InputStreamReader(fis))) {
-
+        try (BufferedReader reader = new BufferedReader(new FileReader(configFile))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 text.append(line).append('\n');
