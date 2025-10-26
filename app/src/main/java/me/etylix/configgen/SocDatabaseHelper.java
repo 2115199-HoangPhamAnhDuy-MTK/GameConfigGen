@@ -45,11 +45,13 @@ public class SocDatabaseHelper extends SQLiteOpenHelper {
                 {"MT6989", "high"},
                 {"SM7675", "medplus"},
                 {"MT6896", "medplus"},
+                {"SM7325", "medplus"},
                 {"MT6789", "med"},
                 {"SM7325", "med"},
                 {"SM6450", "med"},
                 {"SM4350", "low"},
-                {"MT6768", "low"}
+                {"MT6768", "low"},
+                {"SM6225", "low"}
         };
 
         db.beginTransaction();
